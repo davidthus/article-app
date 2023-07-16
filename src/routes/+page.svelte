@@ -6,7 +6,7 @@
 	$: ({ articles } = data);
 </script>
 
-<div class="grid">
+<div>
 	<div>
 		<h2>Articles:</h2>
 		{#each articles as article}
@@ -16,11 +16,9 @@
 					{article.content}
 				</p>
 				<form action="?/deleteArticle&id={article.id}" method="POST">
-					<button type="submit" class="outline secondary">Delete Article</button>
+					<button type="submit">Delete Article</button>
 				</form>
-				<a href="/{article.id}" role="button" class="outline constrast" style="width: 100%;"
-					>Edit Article</a
-				>
+				<a href="/{article.id}" role="button" style="width: 100%;">Edit Article</a>
 			</article>
 		{/each}
 	</div>
